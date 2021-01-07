@@ -644,8 +644,7 @@
                 <h1 class="u-custom-font u-font-oswald u-text u-title u-text-2" style="margin-top: 12px;margin-left: 120px; font-size: 3.8rem;
                   ">Portion Rating</h1>
                 <span class="u-icon u-icon-circle u-palette-2-light-2 u-spacing-18 u-text-palette-2-base u-icon-1">
-                  <svg
-                    class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 512 512" style="">
+                  <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 512 512" style="">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-7d4a"></use>
                   </svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
                     xml:space="preserve" class="u-svg-content" viewBox="0 0 512 512" id="svg-7d4a">
@@ -706,9 +705,17 @@
             </div>
             <div
               class="u-container-style u-layout-cell u-palette-2-base u-radius-50 u-shape-round u-size-30 u-layout-cell-2">
-              <div class="u-container-layout u-container-layout-2"><span
-                  class="u-icon u-icon-circle u-palette-2-light-2 u-spacing-18 u-text-palette-2-base u-icon-1"><svg
-                    class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 512 512" style="">
+              <div class="u-container-layout u-container-layout-2">
+                <h1 id="flavtext" class="u-custom-font u-font-oswald u-text u-title u-text-2" style="
+                    margin-top: 12px;
+                    margin-left: 129px;
+                    font-size: 50px;
+                    ">Service Pacing Rating</h1>
+                <span id="iconflav"
+                  class="u-icon u-icon-circle u-palette-2-light-2 u-spacing-18 u-text-palette-2-base u-icon-1" style="
+                  margin-top: -107px;
+              " ids>
+                  <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 512 512" style="">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-0671"></use>
                   </svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
                     xml:space="preserve" class="u-svg-content" viewBox="0 0 512 512" id="svg-0671">
@@ -729,16 +736,23 @@
                     </g>
                   </svg></span>
                 <div class="u-clearfix u-custom-html u-custom-html-1">
-                  <h1 id="service" style="font-size: 170pt;margin: 70px 10px 0px -35px;text-align: right;"></h1>
+                  <h1 id="service" style="font-size: 170pt;margin: 118px 10px 13px -43px;text-align: right;">0</h1>
                   <script>
                     servicePacingRating == undefined
                       ? document.getElementById("service").innerHTML = 0
                       : document.getElementById("service").innerHTML = servicePacingRating;
                   </script>
                 </div>
-                <h1 class="u-custom-font u-font-oswald u-text u-text-palette-2-light-2 u-title u-text-3">/​10<span
-                    style="font-weight: 700;"></span>
+                <h1 id="sub7" class="u-custom-font u-font-oswald u-text u-text-palette-2-light-2 u-title u-text-3">
+                  /​10<span style="font-weight: 700;"></span>
                 </h1>
+                <script>
+                  if (servicePacingRating >= 10) {
+                    document.getElementById("sub7").style.marginLeft = "268px";
+                  } else {
+                    document.getElementById("sub7").style.paddingLeft = "3px";
+                  }
+                </script>
               </div>
             </div>
           </div>
